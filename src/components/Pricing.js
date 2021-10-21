@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState, useEffect, useRef} from 'react'
 import PropTypes from 'prop-types'
 
 const Pricing = ({ data }) => (
@@ -31,7 +31,7 @@ Pricing.propTypes = {
     PropTypes.shape({
       plan: PropTypes.string,
       price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      description: PropTypes.string,
+      description: PropTypes.string.isRequired,
       items: PropTypes.array,
     })
   ),
